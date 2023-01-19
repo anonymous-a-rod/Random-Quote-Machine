@@ -61,11 +61,11 @@ function App(){
                         <div className="row">
                             <button onClick={getNewQuote} className="btn btn-primary ml-3">New Quote</button>
                             <a href={
-                                "https//:twitter.com/intent/tweet?hastags=quotes&related=freecodecamp&text=" +
+                                "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
                                 encodeURIComponent(
-                                   '"' + randomQuote.text + '"' + randomQuote.author 
+                                '"' + randomQuote.text + '" ' + randomQuote.author
                                 )
-                                } 
+                            }
                                 target="_blank" className="btn btn-warning">
                                     <i className="fa fa-twitter"></i></a>
                             <a href={
