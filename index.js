@@ -2,7 +2,7 @@ function App(){
 
     const [quotes, setQuotes] = React.useState([]);
     const [randomQuote, setRandomQuote] = React.useState("");
-    const [color, setColor] = React.useState('#fff');
+    const [color, setColor] = React.useState('#2c3e50');
     
     React.useEffect(() => {
         async function fetchData(){
@@ -43,7 +43,7 @@ function App(){
         <div style={{
             backgroundColor: color,
             minHeight: "100vh"
-        }}>
+        }} className="d-flex justify-content-center align-items-center">
         <div className="container pt-5" >
             <div className="jumbotron">
                 <div className="card">
@@ -63,10 +63,10 @@ function App(){
                             <a href={
                                 "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
                                 encodeURIComponent(
-                                '"' + randomQuote.text + '" ' + randomQuote.author
+                                '"' + randomQuote.text + '" -' + randomQuote.author
                                 )
                             }
-                                target="_blank" className="btn btn-warning">
+                                target="_blank" className="btn btn-warning ml-1">
                                     <i className="fa fa-twitter"></i></a>
                             <a href={
                     "https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=" +
@@ -74,7 +74,7 @@ function App(){
                     "&content=" +
                     encodeURIComponent(randomQuote.text) +
                     "&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button"
-                  } className="btn btn-danger">
+                  } className="btn btn-danger  ml-1">
                                 
                                 <i className="fa fa-tumblr"></i></a>
                         </div>
